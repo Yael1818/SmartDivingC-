@@ -51,7 +51,7 @@ namespace DivToHours.API.Controllers
         [HttpGet("getByuser/{userId}")]
         public IActionResult GetTestsByUserId(int userId)
         {
-            // מחזיר את המבחנים ששייכים למשתמש עם ה-userId הנתון
+            
             var tests = _testService.GetTestsByUserId(userId);
 
             if (tests == null || !tests.Any())
