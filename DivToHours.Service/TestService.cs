@@ -24,7 +24,7 @@ namespace DivToHours.Service
         }
         public List<Test> GetTestsByUserId(int userId)
         {
-            // מחזיר את המבחנים מה-Repository
+           
             return _testRepository.GetTestsByUserId(userId);
         }
 
