@@ -10,9 +10,9 @@ namespace DivToHours.Core.Model
     {
         public int Id { get; set; }
         public int StudentsId { get; set; }
-        public Student Student { get; set; } // קשר למבחן
+        public Student Student { get; set; } 
 
         public int TestsId { get; set; }
-        public Test Test { get; set; } // קשר לתלמיד
+        public Test Test { get; set; }
     }
 }
