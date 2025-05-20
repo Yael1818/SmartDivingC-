@@ -37,8 +37,8 @@ namespace DivToHours.Data.Repository
         public Student GetStudentWithTests(int studentId)
         {
             return _context.Student
-                .Include(s => s.StudentTests)  // טוען את רשימת המבחנים
-                    .ThenInclude(st => st.Test) // טוען את פרטי המבחנים
+                .Include(s => s.StudentTests)  
+                    .ThenInclude(st => st.Test) 
                 .FirstOrDefault(s => s.Id == studentId);
         }
         public Student GetStudentByTz(string tz)
