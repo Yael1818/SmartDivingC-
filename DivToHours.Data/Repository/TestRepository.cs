@@ -21,7 +21,7 @@ namespace DivToHours.Data.Repository
         }
         public List<Test> GetTestsByUserId(int userId)
         {
-            // מחפש את כל המבחנים ששייכים למשתמש עם ה-userId הנתון
+           
             return _context.Test.Where(t => t.User.Id == userId).ToList();
         }
 
