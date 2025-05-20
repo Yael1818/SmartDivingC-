@@ -1,0 +1,6 @@
+@DivToHours.API_HostAddress = http://localhost:5096
+
+GET {{DivToHours.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
