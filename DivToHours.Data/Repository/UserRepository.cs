@@ -29,7 +29,7 @@ namespace DivToHours.Data.Repository
         {
             return _context.User.FirstOrDefault(u => u.Id == id);
         }
-        public void Delete(int id) // ✅ מימוש הפונקציה
+        public void Delete(int id) 
         {
             var user = _context.User.FirstOrDefault(u => u.Id == id);
             if (user != null)
@@ -49,27 +49,27 @@ namespace DivToHours.Data.Repository
         }
         public void AddTestToUser(int userId, Test test)
         {
-            // מחפש את המשתמש לפי ה-ID
+           
             var user = _context.User.Include(u => u.Tests).FirstOrDefault(u => u.Id == userId);
             if (user != null)
             {
-                // מוסיף את המבחן לרשימה של המבחנים של המשתמש
+               
                 user.Tests.Add(test);
 
-                // שומר את השינויים ב-DB
+               
                 _context.SaveChanges();
             }
         }
         public void AddStudentToUser(int userId, Student student)
         {
-            // מחפש את המשתמש לפי ה-ID
+          
             var user = _context.User.Include(u => u.Students).FirstOrDefault(u => u.Id == userId);
             if (user != null)
             {
-                // מוסיף את המבחן לרשימה של המבחנים של המשתמש
+               
                 user.Students.Add(student);
 
-                // שומר את השינויים ב-DB
+                
                 _context.SaveChanges();
             }
         }
